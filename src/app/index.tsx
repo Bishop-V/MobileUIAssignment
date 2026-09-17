@@ -1,18 +1,10 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  Pressable,
-  ScrollView,
-} from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
 import Nav from "../components/Nav";
 import ArticleImage from "../components/ArticleImage";
-
+import global from "@/styles/global";
 export default function Index() {
   return (
     <SafeAreaView style={styles.main}>
@@ -21,9 +13,11 @@ export default function Index() {
         <InfoCard info="Content and resources selected by and about the Wikimedia community" />
 
         <View style={styles.body}>
-          <Text style={styles.textDate}>Today - Sep 16, 2026</Text>
-          <Text style={styles.textTitle}>Featured Article</Text>
-          <Text style={styles.textDesc}>
+          <Text style={[styles.textDate, global.text]}>
+            Today - Sep 16, 2026
+          </Text>
+          <Text style={[styles.textTitle, global.text]}>Featured Article</Text>
+          <Text style={[styles.textDesc, global.text]}>
             Featured articles are some of the highest-quality articles on
             Wikipedia, selected daily by editors
           </Text>

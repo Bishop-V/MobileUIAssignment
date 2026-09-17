@@ -1,12 +1,15 @@
 import { Text, View, StyleSheet, Image } from "react-native";
-
+import global from "@/styles/global";
 export default function InfoCard({ info }) {
   return (
     <View style={styles.card}>
       <Text
-        style={{
-          flex: 1,
-        }}
+        style={[
+          global.text,
+          {
+            flex: 1,
+          },
+        ]}
       >
         {info}
       </Text>

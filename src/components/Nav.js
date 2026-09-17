@@ -34,7 +34,9 @@ export default function Nav() {
               },
             ]}
           />
-          <Text style={tab.isCurrent && styles.current}>{tab.label}</Text>
+          <Text style={[tab.isCurrent && styles.current, global.text]}>
+            {tab.label}
+          </Text>
         </Pressable>
       ))}
     </View>

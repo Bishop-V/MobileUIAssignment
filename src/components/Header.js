@@ -57,7 +57,7 @@ export default function Header() {
             />
           </Pressable>
           <Pressable onPress={handlePress} onLongPress={handleLongPress}>
-            <Text style={styles.page}>For you</Text>
+            <Text style={[styles.page, global.text]}>For you</Text>
           </Pressable>
         </View>
         {/* language */}
