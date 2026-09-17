@@ -1,13 +1,9 @@
 import { View, StyleSheet, Image, Pressable, Text } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import global from "../styles/global";
+import { handlePress, handleLongPress } from "../actions";
+
 export default function Header() {
-  const handlePress = () => {
-    console.log("on press");
-  };
-  const handleLongPress = () => {
-    console.log("on long press");
-  };
   return (
     <View style={styles.header}>
       <View style={styles.row}>

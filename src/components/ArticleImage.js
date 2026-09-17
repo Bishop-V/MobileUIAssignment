@@ -1,0 +1,58 @@
+import { View, Image, StyleSheet, Pressable } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { handlePress } from "@/actions";
+import global from "@/styles/global";
+export default function ArticleImage() {
+  return (
+    <View style={styles.main}>
+      <View style={styles.wrap}>
+        <Image
+          style={styles.image}
+          source={require("../assets/featured.jpg")}
+        ></Image>
+        <View style={styles.actions}>
+          <Pressable onPress={handlePress} style={styles.iconBackground}>
+            <Ionicons name="bookmark-outline" style={global.icon}></Ionicons>
+          </Pressable>
+          <Pressable onPress={handlePress} style={styles.iconBackground}>
+            <Ionicons
+              name="share-social-outline"
+              style={global.icon}
+            ></Ionicons>
+          </Pressable>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  iconBackground: {
+    backgroundColor: "#27292D",
+    borderRadius: 999,
+    width: 44,
+    height: 44,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  wrap: {
+    position: "relative",
+  },
+  main: {
+    paddingHorizontal: "2%",
+    marginVertical: "2%",
+  },
+  actions: {
+    position: "absolute",
+    flexDirection: "row",
+    top: 20,
+    right: 20,
+    gap: 20,
+  },
+  image: {
+    borderRadius: 25,
+    resizeMode: "cover",
+    width: "100%",
+    height: 400,
+  },
+});
