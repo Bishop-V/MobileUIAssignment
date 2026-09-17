@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
 import Nav from "../components/Nav";
 import ArticleImage from "../components/ArticleImage";
+import AlertButton from "../components/AlertButton";
 import global from "@/styles/global";
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
         </View>
         <ArticleImage />
       </ScrollView>
+      <AlertButton />
       <Nav />
     </SafeAreaView>
   );
