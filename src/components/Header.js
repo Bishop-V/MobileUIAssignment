@@ -80,10 +80,9 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "column",
     width: "100%",
-
-    marginTop: "1%",
+    gap: 20,
+    marginVertical: "1%",
     paddingHorizontal: "3%",
-    height: "5%",
   },
   row: {
     justifyContent: "space-between",

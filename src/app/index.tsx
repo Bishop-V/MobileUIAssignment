@@ -2,10 +2,13 @@ import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import Header from "../components/Header";
+import InfoCard from "../components/InfoCard";
 export default function Index() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.main}>
       <Header />
+
+      <InfoCard info="Content and resources selected by and about the Wikimedia community" />
 
       <View style={styles.body}></View>
     </SafeAreaView>
@@ -23,12 +26,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: "1%",
     paddingHorizontal: "3%",
-    height: "8%",
   },
   body: {
     flex: 2,
   },
-  container: {
+  main: {
     flex: 1,
     backgroundColor: "#202122",
   },
